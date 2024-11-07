@@ -41,6 +41,7 @@ def get_features(row, prev, super_prev) -> dict:
         'dx': abs(row['x'] - prev['x']) if prev is not None else 0,
         'dy': abs(row['y'] - prev['y']) if prev is not None else 0,
         'dz': abs(row['z'] - prev['z']) if prev is not None else 0,
+        'last': prev['activity'] if prev is not None else "IDLE",
         # 'ddx': abs(row['x'] - super_prev['x']) if super_prev is not None else 0,
         # 'ddy': abs(row['y'] - super_prev['y']) if super_prev is not None else 0,
         # 'ddz': abs(row['z'] - super_prev['z']) if super_prev is not None else 0,
